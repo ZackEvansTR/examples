@@ -251,7 +251,7 @@
 
           aria.Utils.IgnoreUtilFocusChanges = true;
           try {
-            element.querySelector('h2').focus();
+            element.focus();
           } catch (e) {
             // continue regardless of error
           }
@@ -358,13 +358,8 @@
             );
           }
 
-          if (typeof focusFirst === 'string') {
-            this.focusFirst = document.getElementById(focusFirst);
-          } else if (typeof focusFirst === 'object') {
-            this.focusFirst = focusFirst;
-          } else {
-            this.focusFirst = null;
-          }
+          this.focusFirst = this.dialogNode.querySelector('h2');
+          console.log(this.focusFirst);
 
           // Bracket the dialog node with two invisible, focusable nodes.
           // While this dialog is open, we use these to make sure that focus never
@@ -395,8 +390,6 @@
 
           if (this.focusFirst) {
             this.focusFirst.focus();
-          } else {
-            aria.Utils.focusFirstDescendant(this.dialogNode);
           }
 
           this.lastFocus = document.activeElement;
