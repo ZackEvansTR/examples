@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="en-AU">
+
+<head>
+  <meta charset="utf-8">
+  <title>Modal</title>
+  <meta name="description" content="Testing the lang attribute with AMP and access assistant">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .dialog-header, .dialog-cta { display: flex; justify-content: space-between; }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Modal</h1>
+  
+    <button type="button" onclick="openDialog('dialog1', this)">
+      Add Delivery Address
+    </button>
+    <div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden">
+      <div class="dialog-header">
+        <h2 id="dialog1_label" class="dialog_label">
+          My example dialog
+        </h2>
+        <button type="button" onclick="closeDialog(this)">
+          Close
+        </button>
+      </div>
+      <ul>
+        <li>This is my first list item.</li>
+        <li>This is my second list item.</li>
+      </ul>
+      <div class="dialog-cta">
+        <button>
+          My first button
+        </button>
+        <button>
+          My second button
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
