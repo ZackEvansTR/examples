@@ -6,6 +6,7 @@
   <title>Modal</title>
   <meta name="description" content="Testing the lang attribute with AMP and access assistant">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3.org/WAI/ARIA/apg/example-index/dialog-modal/css/dialog.css">
   <style>
     .dialog-header, .dialog-cta { display: flex; justify-content: space-between; }
   </style>
@@ -16,7 +17,7 @@
     <h1>Modal</h1>
   
     <button type="button" onclick="openDialog('dialog1', this)">
-      Add Delivery Address
+      Open a modal
     </button>
     <div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden">
       <div class="dialog-header">
