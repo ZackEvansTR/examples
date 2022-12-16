@@ -203,7 +203,7 @@
          *  true if a focusable element is found and focus is set.
          */
         aria.Utils.focusFirstDescendant = function (element) {
-          /*for (var i = 0; i < element.childNodes.length; i++) {
+          for (var i = 0; i < element.childNodes.length; i++) {
             var child = element.childNodes[i];
             if (
               aria.Utils.attemptFocus(child) ||
@@ -212,8 +212,7 @@
               return true;
             }
           }
-          return false;*/
-          console.log(element);
+          return false;
         }; // end focusFirstDescendant
 
         /**
@@ -244,6 +243,8 @@
          *  true if element is focused.
          */
         aria.Utils.attemptFocus = function (element) {
+          console.log(element);
+
           if (!aria.Utils.isFocusable(element)) {
             return false;
           }
